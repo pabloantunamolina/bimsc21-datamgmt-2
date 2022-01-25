@@ -26,12 +26,13 @@ function init() {
     document.body.appendChild( renderer.domElement )
 
     const controls = new OrbitControls( camera, renderer.domElement )
-
+    
     const directionalLight = new THREE.DirectionalLight( 0xffffff )
     directionalLight.position.set( 0, 0, 2 )
     directionalLight.castShadow = true
     directionalLight.intensity = 2
     scene.add( directionalLight )
+   
 
     raycaster = new THREE.Raycaster()
 
@@ -45,6 +46,7 @@ function init() {
         console.log( object )
 
     } )
+
 
 }
 
@@ -70,6 +72,9 @@ function onClick( event ) {
     scene.traverse((child, i) => {
         if (child.isMesh) {
             child.material.color.set( 'white' )
+            //child.material = material
+
+        
         }
     });
 

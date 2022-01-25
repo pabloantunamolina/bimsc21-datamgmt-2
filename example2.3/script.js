@@ -42,6 +42,7 @@ function init () {
 
     let material, cubeMap
 
+
     // load a pbr material
     const tl = new THREE.TextureLoader()
     tl.setPath('materials/PBR/streaked-metal1/')
